@@ -30,23 +30,36 @@ public class JerkSON {
         Pattern bread = Pattern.compile("[Bb][Rr][Ee][Aa][Dd]");
         Matcher correctBreadName = bread.matcher(name);
         correctBreadName.find();
-        return correctBreadName.replaceAll("Milk");
+        return correctBreadName.replaceAll("Bread");
     }
 
     public String parseCookies(String name)throws Exception{
         Pattern cookies = Pattern.compile("[Cc][Oo0][Oo0][Kk][Ii][Ee][Ss]");
         Matcher correctCookiesName = cookies.matcher(name);
         correctCookiesName.find();
-        return correctCookiesName.replaceAll("Milk");
+        return correctCookiesName.replaceAll("Cookies");
     }
 
     public String parseApples(String name)throws Exception{
-        Pattern apples = Pattern.compile("[Cc][Oo0][Oo0][Kk][Ii][Ee][Ss]");
+        Pattern apples = Pattern.compile("[Aa][Pp][Pp][Ll][Ee][Ss]");
         Matcher correctApplesName = apples.matcher(name);
         correctApplesName.find();
-        return correctApplesName.replaceAll("Milk");
+        return correctApplesName.replaceAll("Apples");
     }
 
+    public String parseNameTitle(String name)throws Exception{
+        Pattern nameTitle = Pattern.compile("[Nn] [Aa] [Mm] [Ee]");
+        Matcher correctNameTitle = nameTitle.matcher(name);
+        correctNameTitle.find();
+        return correctNameTitle.replaceAll("name");
+    }
+
+    public String parsePriceTitle(String name)throws Exception{
+        Pattern priceTitle = Pattern.compile("[Pp] [Ri] [Cc] [Ee]");
+        Matcher correctPriceTitle = priceTitle.matcher(name);
+        correctPriceTitle.find();
+        return correctPriceTitle.replaceAll("Price");
+    }
 
 
 
