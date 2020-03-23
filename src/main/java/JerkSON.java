@@ -52,30 +52,42 @@ public class JerkSON {
 
 
     public String parseMilk(String name)throws Exception{
+        int milkCount = 0;
         Pattern milk = Pattern.compile("[Mm][Ii][Ll][Kk]");
         Matcher correctMilkName = milk.matcher(name);
-        correctMilkName.find();
+        while(correctMilkName.find()){
+            milkCount++;
+        }
         return correctMilkName.replaceAll("Milk");
     }
 
     public String parseBread(String name)throws Exception{
+        int breadCount = 0;
         Pattern bread = Pattern.compile("[Bb][Rr][Ee][Aa][Dd]");
         Matcher correctBreadName = bread.matcher(name);
-        correctBreadName.find();
+        while(correctBreadName.find()){
+            breadCount++;
+        }
         return correctBreadName.replaceAll("Bread");
     }
 
     public String parseCookies(String name)throws Exception{
+        int cookiesCount = 0;
         Pattern cookies = Pattern.compile("[Cc][Oo0][Oo0][Kk][Ii][Ee][Ss]");
         Matcher correctCookiesName = cookies.matcher(name);
-        correctCookiesName.find();
+        while(correctCookiesName.find()){
+            cookiesCount++;
+        }
         return correctCookiesName.replaceAll("Cookies");
     }
 
     public String parseApples(String name)throws Exception{
+        int applesCount = 0;
         Pattern apples = Pattern.compile("[Aa][Pp][Pp][Ll][Ee][Ss]");
         Matcher correctApplesName = apples.matcher(name);
-        correctApplesName.find();
+        while(correctApplesName.find()){
+            applesCount++;
+        }
         return correctApplesName.replaceAll("Apples");
     }
 
