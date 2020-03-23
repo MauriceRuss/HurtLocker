@@ -105,6 +105,9 @@ public class JerkSON {
         return correctPriceTitle.replaceAll("Price");
     }
 
+    public Integer[] numberOfFoodOccurrences (){
+        return null;
+    }
 
 
 }
